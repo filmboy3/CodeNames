@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+<script src ="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<div id = "totalBox">
+<div class="Rows" id="Row1">
+<div class="boxes" ondblclick = "spoil_1()" id="bg1"><img id = "shot1"></img><img id = "shot1_1"></img><span id="First"></span><span id="firstUpsideDown"></span></div>
+<div class="boxes" id="bg2" ondblclick = "spoil_2()"><img id = "shot2"></img><img id = "shot2_1"></img><span id="Second"></span><span id="secondUpsideDown"></span></div>
+<div class="boxes" id="bg3" ondblclick = "spoil_3()"><img id = "shot3"></img><img id = "shot3_1"></img><span id="Third"></span><span id="thirdUpsideDown"></span></div>
+<div class="boxes" id="bg4" ondblclick = "spoil_4()"><img id = "shot4"></img><img id = "shot4_1"></img><span id="Fourth"></span><span id="fourthUpsideDown"></span></div>
+<div class="boxes" id="bg5" ondblclick = "spoil_5()"><img id = "shot5"></img><img id = "shot5_1"></img><span id="Fifth"></span><span id="fifthUpsideDown"></span></div>
+</div><p></p>
+<div class="Rows" id="Row2">
+<div class="boxes" id="bg6" ondblclick = "spoil_6()"><img id = "shot6"></img><img id = "shot6_1"></img><span id="Sixth"></span><span id="sixthUpsideDown"></span></div>
+<div class="boxes" id="bg7" ondblclick = "spoil_7()"><img id = "shot7"></img><img id = "shot7_1"></img><span id="Seventh"></span><span id="seventhUpsideDown"></span></div>
+<div class="boxes" id="bg8" ondblclick = "spoil_8()"><img id = "shot8"></img><img id = "shot8_1"></img><span id="Eighth"></span><span id="eighthUpsideDown"></span></div>
+<div class="boxes" id="bg9" ondblclick = "spoil_9()"><img id = "shot9"></img><img id = "shot9_1"></img><span id="Nine"></span><span id="nineUpsideDown"></span></div>
+<div class="boxes" id="bg10" ondblclick = "spoil_10()"><img id = "shot10"></img><img id = "shot10_1"></img><span id="Ten"></span><span id="tenUpsideDown"></span></div>
+</div><p></p>
+<div class="Rows" id="Row3">
+<div class="boxes" id="bg11" ondblclick = "spoil_11()"><img id = "shot11"></img><img id = "shot11_1"></img><span id="Eleven"></span><span id="elevenUpsideDown"></span></div>
+<div class="boxes" id="bg12" ondblclick = "spoil_12()"><img id = "shot12"></img><img id = "shot12_1"></img><span id="Twelve"></span><span id="twelveUpsideDown"></span></div>
+<div class="boxes" id="bg13" ondblclick = "spoil_13()"><img id = "shot13"></img><img id = "shot13_1"></img><span id="Thirteen"></span><span id="thirteenUpsideDown"></span></div>
+<div class="boxes" id="bg14" ondblclick = "spoil_14()"><img id = "shot14"></img><img id = "shot14_1"></img><span id="Fourteen"></span><span id="fourteenUpsideDown"></span></div>
+<div class="boxes" id="bg15" ondblclick = "spoil_15()"><img id = "shot15"></img><img id = "shot15_1"></img><span id="Fifteen"></span><span id="fifteenUpsideDown"></span></div>
+</div><p></p>
+<div class="Rows" id="Row4">
+<div class="boxes" id="bg16" ondblclick = "spoil_16()"><img id = "shot16"></img><img id = "shot16_1"></img><span id="Sixteen"></span><span id="sixteenUpsideDown"></span></div>
+<div class="boxes" id="bg17" ondblclick = "spoil_17()"><img id = "shot17"></img><img id = "shot17_1"></img><span id="Seventeen"></span><span id="seventeenUpsideDown"></span></div>
+<div class="boxes" id="bg18" ondblclick = "spoil_18()"><img id = "shot18"></img><img id = "shot18_1"></img><span id="Eighteen"></span><span id="eighteenUpsideDown"></span></div>
+<div class="boxes" id="bg19" ondblclick = "spoil_19()"><img id = "shot19"></img><img id = "shot19_1"></img><span id="Nineteen"></span><span id="nineteenUpsideDown"></span></div>
+<div class="boxes" id="bg20" ondblclick = "spoil_20()"><img id = "shot20"></img><img id = "shot20_1"></img><span id="Twenty"></span><span id="twentyUpsideDown"></span></div>
+</div><p></p>
+<div class="Rows" id="Row4">
+<div class="boxes" id="bg21" ondblclick = "spoil_21()"><img id = "shot21"></img><img id = "shot21_1"></img><span id="TwentyOne"></span><span id="twentyoneUpsideDown"></span></div>
+<div class="boxes" id="bg22" ondblclick = "spoil_22()"><img id = "shot22"></img><img id = "shot22_1"></img><span id="TwentyTwo"></span><span id="twentytwoUpsideDown"></span></div>
+<div class="boxes" id="bg23" ondblclick = "spoil_23()"><img id = "shot23"></img><img id = "shot23_1"></img><span id="TwentyThree"></span><span id="twentythreeUpsideDown"></span></div>
+<div class="boxes" id="bg24" ondblclick = "spoil_24()"><img id = "shot24"></img><img id = "shot24_1"></img><span id="TwentyFour"></span><span id="twentyfourUpsideDown"></span></div>
+<div class="boxes" id="bg25" ondblclick = "spoil_25()"><img id = "shot25"></img><img id = "shot25_1"></img><span id="TwentyFive"></span><span id="twentyfiveUpsideDown"></span></div>
+</div>
+</div>
+
+<div id = "nav" style="text-align: center;">
+<button onclick="random()">New Game!</button>
+<button id = "spoilButton" onclick="spoilers()">Spymasters ONLY!</button>
+<button onclick="seed()">Join Game!</button>
+<div id ="start"><p id="teamStart"></p></div>
+</div>
+<!-- <br>
+<div id = "board"></div> -->
+<script>var spoilerCounter = 0;
+var spoilerCounter1 = 0;
+var spoilerCounter2 = 0;
+var spoilerCounter3 = 0;
+var spoilerCounter4 = 0;
+var spoilerCounter5 = 0;
+var spoilerCounter6 = 0;
+var spoilerCounter7 = 0;
+var spoilerCounter8 = 0;
+var spoilerCounter9 = 0;
+var spoilerCounter10 = 0;
+var spoilerCounter11 = 0;
+var spoilerCounter12 = 0;
+var spoilerCounter13 = 0;
+var spoilerCounter14 = 0;
+var spoilerCounter15 = 0;
+var spoilerCounter16 = 0;
+var spoilerCounter17 = 0;
+var spoilerCounter18 = 0;
+var spoilerCounter19 = 0;
+var spoilerCounter20 = 0;
+var spoilerCounter21 = 0;
+var spoilerCounter22 = 0;
+var spoilerCounter23 = 0;
+var spoilerCounter24 = 0;
+var spoilerCounter25 = 0;
+</script>
+
+<script>function spoil_1() {
+    if (spoilerCounter1 === 0){
+      spoilerCounter1 = 1;
+    document.getElementById("shot1_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_2() {
+    if (spoilerCounter2 === 0){
+      spoilerCounter2 = 1;
+    document.getElementById("shot2_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_3() {
+    if (spoilerCounter3 === 0){
+      spoilerCounter3 = 1;
+    document.getElementById("shot3_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_4() {
+    if (spoilerCounter4 === 0){
+      spoilerCounter4 = 1;
+    document.getElementById("shot4_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_5() {
+    if (spoilerCounter5 === 0){
+      spoilerCounter5 = 1;
+    document.getElementById("shot5_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_6() {
+    if (spoilerCounter6 === 0){
+      spoilerCounter6 = 1;
+    document.getElementById("shot6_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_7() {
+    if (spoilerCounter7 === 0){
+      spoilerCounter7 = 1;
+    document.getElementById("shot7_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_8() {
+    if (spoilerCounter8 === 0){
+      spoilerCounter8 = 1;
+    document.getElementById("shot8_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_9() {
+    if (spoilerCounter9 === 0){
+      spoilerCounter9 = 1;
+    document.getElementById("shot9_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_10() {
+    if (spoilerCounter10 === 0){
+      spoilerCounter10 = 1;
+    document.getElementById("shot10_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_11() {
+    if (spoilerCounter11 === 0){
+      spoilerCounter11 = 1;
+    document.getElementById("shot11_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_12() {
+    if (spoilerCounter12 === 0){
+      spoilerCounter12 = 1;
+    document.getElementById("shot12_1").style.opacity = 1;
+    }
+
+}</script>
+
+
+<script>function spoil_13() {
+    if (spoilerCounter13 === 0){
+      spoilerCounter13 = 1;
+    document.getElementById("shot13_1").style.opacity = 1;
+    }
+
+}</script>
+
+
+<script>function spoil_14() {
+    if (spoilerCounter14 === 0){
+      spoilerCounter14 = 1;
+    document.getElementById("shot14_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_15() {
+    if (spoilerCounter15 === 0){
+      spoilerCounter15 = 1;
+    document.getElementById("shot15_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_16() {
+    if (spoilerCounter16 === 0){
+      spoilerCounter16 = 1;
+    document.getElementById("shot16_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_17() {
+    if (spoilerCounter17 === 0){
+      spoilerCounter17 = 1;
+    document.getElementById("shot17_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_18() {
+    if (spoilerCounter18 === 0){
+      spoilerCounter18 = 1;
+    document.getElementById("shot18_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_19() {
+    if (spoilerCounter19 === 0){
+      spoilerCounter19 = 1;
+    document.getElementById("shot19_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_20() {
+    if (spoilerCounter20 === 0){
+      spoilerCounter20 = 1;
+    document.getElementById("shot20_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_21() {
+    if (spoilerCounter21 === 0){
+      spoilerCounter21 = 1;
+    document.getElementById("shot21_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_22() {
+    if (spoilerCounter22 === 0){
+      spoilerCounter22 = 1;
+    document.getElementById("shot22_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_23() {
+    if (spoilerCounter23 === 0){
+      spoilerCounter23 = 1;
+    document.getElementById("shot23_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_24() {
+    if (spoilerCounter24 === 0){
+      spoilerCounter24 = 1;
+    document.getElementById("shot24_1").style.opacity = 1;
+    }
+
+}</script>
+
+<script>function spoil_25() {
+    if (spoilerCounter25 === 0){
+      spoilerCounter25 = 1;
+    document.getElementById("shot25_1").style.opacity = 1;
+    }
+
+}</script>
+
+
+
+
+
+
+<script>function spoilers() {
+
+  if(spoilerCounter === 0){
+
+  var x=window.confirm("Are you a Spymaster?");
+if (x) {
+    window.alert("Here's your code ...!");
+
+    document.getElementById("shot1").style.opacity = 1;
+    document.getElementById("shot2").style.opacity = 1;
+    document.getElementById("shot3").style.opacity = 1;
+    document.getElementById("shot4").style.opacity = 1;
+    document.getElementById("shot5").style.opacity = 1;
+    document.getElementById("shot6").style.opacity = 1;
+    document.getElementById("shot7").style.opacity = 1;
+    document.getElementById("shot8").style.opacity = 1;
+    document.getElementById("shot9").style.opacity = 1;
+    document.getElementById("shot10").style.opacity = 1;
+    document.getElementById("shot11").style.opacity = 1;
+    document.getElementById("shot12").style.opacity = 1;
+    document.getElementById("shot13").style.opacity = 1;
+    document.getElementById("shot14").style.opacity = 1;
+    document.getElementById("shot15").style.opacity = 1;
+    document.getElementById("shot16").style.opacity = 1;
+    document.getElementById("shot17").style.opacity = 1;
+    document.getElementById("shot18").style.opacity = 1;
+    document.getElementById("shot19").style.opacity = 1;
+    document.getElementById("shot20").style.opacity = 1;
+    document.getElementById("shot21").style.opacity = 1;
+    document.getElementById("shot22").style.opacity = 1;
+    document.getElementById("shot23").style.opacity = 1;
+    document.getElementById("shot24").style.opacity = 1;
+    document.getElementById("shot25").style.opacity = 1;
+    spoilerCounter = 1;
+    document.getElementById("spoilButton").innerHTML = "HIDE SPOILERS";
+
+  }
+  else
+    window.alert("Get out of here, you little cheater!");
+ 
+} else {
+    document.getElementById("shot1").style.opacity = 0;
+    document.getElementById("shot2").style.opacity = 0;
+    document.getElementById("shot3").style.opacity = 0;
+    document.getElementById("shot4").style.opacity = 0;
+    document.getElementById("shot5").style.opacity = 0;
+    document.getElementById("shot6").style.opacity = 0;
+    document.getElementById("shot7").style.opacity = 0;
+    document.getElementById("shot8").style.opacity = 0;
+    document.getElementById("shot9").style.opacity = 0;
+    document.getElementById("shot10").style.opacity = 0;
+    document.getElementById("shot11").style.opacity = 0;
+    document.getElementById("shot12").style.opacity = 0;
+    document.getElementById("shot13").style.opacity = 0;
+    document.getElementById("shot14").style.opacity = 0;
+    document.getElementById("shot15").style.opacity = 0;
+    document.getElementById("shot16").style.opacity = 0;
+    document.getElementById("shot17").style.opacity = 0;
+    document.getElementById("shot18").style.opacity = 0;
+    document.getElementById("shot19").style.opacity = 0;
+    document.getElementById("shot20").style.opacity = 0;
+    document.getElementById("shot21").style.opacity = 0;
+    document.getElementById("shot22").style.opacity = 0;
+    document.getElementById("shot23").style.opacity = 0;
+    document.getElementById("shot24").style.opacity = 0;
+    document.getElementById("shot25").style.opacity = 0;
+
+    spoilerCounter = 0;
+    document.getElementById("spoilButton").innerHTML = "Spymasters ONLY!";
+  } 
+
+  }
+  </script>
+
+ <script>
+ var globalVar = 0;
+ </script>
+<script>
+var newSeed = Math.round(Math.random() * 10000);
+function random() {
+    var x = Math.sin(newSeed++) * 10000;
+spoilerCounter = 0;
+spoilerCounter1 = 0;
+spoilerCounter2 = 0;
+spoilerCounter3 = 0;
+spoilerCounter4 = 0;
+spoilerCounter5 = 0;
+spoilerCounter6 = 0;
+spoilerCounter7 = 0;
+spoilerCounter8 = 0;
+spoilerCounter9 = 0;
+spoilerCounter10 = 0;
+spoilerCounter11 = 0;
+spoilerCounter12 = 0;
+spoilerCounter13 = 0;
+spoilerCounter14 = 0;
+spoilerCounter15 = 0;
+spoilerCounter16 = 0;
+spoilerCounter17 = 0;
+spoilerCounter18 = 0;
+spoilerCounter19 = 0;
+spoilerCounter20 = 0;
+spoilerCounter21 = 0;
+spoilerCounter22 = 0;
+spoilerCounter23 = 0;
+spoilerCounter24 = 0;
+spoilerCounter25 = 0;
+    document.getElementById("shot1").style.opacity = 0;
+    document.getElementById("shot2").style.opacity = 0;
+    document.getElementById("shot3").style.opacity = 0;
+    document.getElementById("shot4").style.opacity = 0;
+    document.getElementById("shot5").style.opacity = 0;
+    document.getElementById("shot6").style.opacity = 0;
+    document.getElementById("shot7").style.opacity = 0;
+    document.getElementById("shot8").style.opacity = 0;
+    document.getElementById("shot9").style.opacity = 0;
+    document.getElementById("shot10").style.opacity = 0;
+    document.getElementById("shot11").style.opacity = 0;
+    document.getElementById("shot12").style.opacity = 0;
+    document.getElementById("shot13").style.opacity = 0;
+    document.getElementById("shot14").style.opacity = 0;
+    document.getElementById("shot15").style.opacity = 0;
+    document.getElementById("shot16").style.opacity = 0;
+    document.getElementById("shot17").style.opacity = 0;
+    document.getElementById("shot18").style.opacity = 0;
+    document.getElementById("shot19").style.opacity = 0;
+    document.getElementById("shot20").style.opacity = 0;
+    document.getElementById("shot21").style.opacity = 0;
+    document.getElementById("shot22").style.opacity = 0;
+    document.getElementById("shot23").style.opacity = 0;
+    document.getElementById("shot24").style.opacity = 0;
+    document.getElementById("shot25").style.opacity = 0;
+  	
+     document.getElementById("shot1_1").style.opacity = 0;
+    document.getElementById("shot2_1").style.opacity = 0;
+    document.getElementById("shot3_1").style.opacity = 0;
+    document.getElementById("shot4_1").style.opacity = 0;
+    document.getElementById("shot5_1").style.opacity = 0;
+    document.getElementById("shot6_1").style.opacity = 0;
+    document.getElementById("shot7_1").style.opacity = 0;
+    document.getElementById("shot8_1").style.opacity = 0;
+    document.getElementById("shot9_1").style.opacity = 0;
+    document.getElementById("shot10_1").style.opacity = 0;
+    document.getElementById("shot11_1").style.opacity = 0;
+    document.getElementById("shot12_1").style.opacity = 0;
+    document.getElementById("shot13_1").style.opacity = 0;
+    document.getElementById("shot14_1").style.opacity = 0;
+    document.getElementById("shot15_1").style.opacity = 0;
+    document.getElementById("shot16_1").style.opacity = 0;
+    document.getElementById("shot17_1").style.opacity = 0;
+    document.getElementById("shot18_1").style.opacity = 0;
+    document.getElementById("shot19_1").style.opacity = 0;
+    document.getElementById("shot20_1").style.opacity = 0;
+    document.getElementById("shot21_1").style.opacity = 0;
+    document.getElementById("shot22_1").style.opacity = 0;
+    document.getElementById("shot23_1").style.opacity = 0;
+    document.getElementById("shot24_1").style.opacity = 0;
+    document.getElementById("shot25_1").style.opacity = 0;
+  	
+var blueArray = ["BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","RED","RED","RED","RED","RED","RED","RED","RED","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","ASSASSIN"];
+var redArray  =["RED","RED","RED","RED","RED","RED","RED","RED","RED","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","ASSASSIN"];
+  
+var wordArray = ["AFRICA","AGENT","AIR","ALIEN","ALPS","AMAZON","AMBULANCE","AMERICA","ANGEL","ANTARCTICA","APPLE","ARM","ATLANTIS","AUSTRALIA","AZTEC","BACK","BALL","BALL ","BAND","BANK","BAR","BARK","BASE","BAT","BATTERY","BEACH","BEAR","BEAT","BED","BEIJING","BELL","BELT","BERLIN","BERMUDA","BERRY","BILL","BLOCK","BOARD","BOLT","BOND","BOOM","BOOT","BOTTLE","BOW","BOX","BRIDGE","BRUSH","BUCK","BUFFALO","BUG","BUG ","CALF","CANADA","CAP","CAPITAL","CAR","CARD","CARROT","CASINO","CAST","CAT","CELL","CENTAUR","CENTER","CHAIR","CHANGE","CHARGE","CHECK","CHECK ","CHEST","CHICK","CHINA","CHOCOLATE","CHURCH","CIRCLE","CLIFF","CLUB","CODE","COLD","COMIC","COMPOUND","CONCERT","CONTRACT","COOK","COPPER","CORNER","COTTON","COURT","COVER","CRANE","CRASH","CRICKET","CROSS","CROWN","CYCLE","CZECH","DANCE","DATE","DAY","DEATH","DECK","DEGREE","DIAMOND","DICE","DINOSAUR","DISEASE","DOCTOR","DOG","DRAFT","DRAGON","DRESS","DRESS ","DRILL","DROP","DUCK","DWARF","EAGLE","EGYPT","ENGINE","ENGLAND","EUROPE","EYE","FAIR","FALL","NURSE","FAN","FENCE","FIELD","FIGHTER","FIGURE","FILE","FILM","FIRE","FISH","FLUTE","FLY","FOOT","FORCE","FOREST","FORK","FRANCE","GAME","GAS","GENIUS","GERMANY","GHOST","GIANT","GLASS","GLOVE","GOLD","GRACE","GRASS","GREECE","GREEN","GROUND","HAM","HAND","HAWK","HEAD","HEART","HELICOPTER","HIMALAYAS","HOLE","HOLLYWOOD","HONEY","HOOD","HOOK","HORN","HORSE","HORSESHOE","HOSPITAL","HOTEL","ICE","ICE CREAM","INDIA","INFLUENZA","IRON","IVORY","JAM","JAME","JET","JUPITER","KANGAROO","KETCHUP","KEY","KID","KING","KIWI","KNIFE","KNIGHT","LAB","LAP","LASER","LAWYER","LEAD","LEMON","LIFE","LIMOUSINE","LINE","LINK","LION","LITTER","LOCH NESS","LOCK","LOG","LONDON","LUCK","MAIL","MAMMOTH","MAPLE","MARBLE","MARCH","MARK","MASS","MATCH","MERCURY","MEXICO","MICROSCOPE","MILLIONAIRE","MINE","MINT","MISSILE","MODEL","MOLE","MOON","MOSCOW","MOUNT","MOUTH","MUG","NAIL","NEEDLE","NET","NEW YORK","NIGHT","NOTE","NOVEL","NURSE","NUT","OCTOPUS","OIL","OLIVE","OLYMPUS","OPERA","ORANGE","PALM","PANTS","PAPER","PARK","PART","PASS","PASTE","PENGUIN","PHOENIX","PIANO","PIE","PILOT","PIN","PIPE","PIRATE","PISTOL","PIT","PITCH","PLANE","PLASTIC","PLATE","PLATYPUS","PLAY","PLOT","POINT","POISON","POLE","POOL","POOL ","PORT","POST","POUND","PRESS","PRINCESS","PRIVATE","PARK","PUMPKIN","PUPIL","PURPLE","PYRAMID","QUEEN","RABBIT","RACKET","RAY","REVOLUTION","RING","ROBIN","ROBOT","ROCK","ROME","ROOT","ROSE","ROULETTE","ROUND","ROW","RULER","SATELLITE","SATURN","SCALE","SCHOOL","SCORPION","SCREEN","SCREEN ","SCUBA DIVER","SEAL","SEARCH","SERVER","SHADOW","SHAKESPEARE","SHARK","SHIP","SHOE","SHOP","SHOT","SKYSCRAPER","SLIP","SMUGGLER","SNOW","SNOWMAN","SOCK","SOLDIER","SOUL","SOUND","SPACE","SPIKE","SPINE","SPOT","SPRING","SPY","SQUARE","STADIUM","STAFF","STAR","STATE","STICK","STOCK","STRAW","STREAM","STRIKE","STRING","SUB","SUIT","SUPERHERO","SWING","SWITCH","TABLE","TABLET","TAG","TAIL","TAP","TEACHER","TELESCOPE","TEMPLE","THEATER","THIEF","THUMB","TICK","TIE","TIME","TOKYO","TOOTH","TORCH","TOWER","TRACK","TRAIN","TRIANGLE","TRIP","TRUNK","TUBA","TUBE","TURKEY","UNDERTAKER","UNICORN","VACUUM","VAN","VET","WAKE","WALL","WAR","WASHER","WASHINGTON","WATCH","WATER","WAVE","WEB","WELL","WHALE","WHIP","WIND","WITCH","WORM","YARD"];
+  
+    var colorSetup = x > .5 ? blueArray : redArray; 
+  	var colorStart = colorSetup === blueArray ? "BLUE" :"RED";
+
+    var wordBoardArray = [];
+  	var boardArray = [];
+    var n = colorSetup.length;
+  	var y = 0;
+    var z = 0;
+    var p = 0;
+    var m = 0;
+    var q = 0;
+    var wordq = 0;
+
+    var t = x - Math.floor(x);
+    var b = t.toString().split("");
+    b.splice(0, 2);    
+
+    b.push(b.shift());
+    m = parseFloat("." + b.join(""));
+
+
+   
+
+    var newNum = Math.round((x - Math.floor(x))*10000000000000000)*2;
+    var longArray = [];
+    var stringNum = newNum.toString().split("");
+    stringNum = stringNum.concat(stringNum);
+  		for (i = 0; i < n; i++){
+        p = colorSetup.length;
+        q = wordArray.length;
+
+        // b.push(b.shift());
+         b.push(b.shift());
+         m = parseFloat("." + b.join(""));
+  			 y = Math.floor(m*p);
+        wordq = Math.floor(m*q);
+        wordBoardArray.push(wordArray.splice(wordq,1));
+  			boardArray.push(colorSetup.splice(y,1));
+  		}
+
+   var colorCode = [];
+
+ for (i = 0; i < boardArray.length; i++){
+   if(boardArray[i].toString() === "RED"){
+     colorCode.push(0);
+   } if(boardArray[i].toString() === "BLUE"){
+     colorCode.push(1);
+   } if(boardArray[i].toString() === "ASSASSIN"){
+     colorCode.push(2);
+   } if(boardArray[i].toString() === "BYSTANDER"){
+     colorCode.push(3);
+   }
+ }
+
+ var cardsImages = ["RedCard.png","BlueCard.png","AssassinCard.png","BystanderCard.png"];
+
+ shot1.src = cardsImages[colorCode[0]];
+ shot2.src = cardsImages[colorCode[1]];
+ shot3.src = cardsImages[colorCode[2]];
+ shot4.src = cardsImages[colorCode[3]];
+ shot5.src = cardsImages[colorCode[4]];
+ shot6.src = cardsImages[colorCode[5]];
+ shot7.src = cardsImages[colorCode[6]];
+ shot8.src = cardsImages[colorCode[7]];
+ shot9.src = cardsImages[colorCode[8]];
+ shot10.src = cardsImages[colorCode[9]];
+ shot11.src = cardsImages[colorCode[10]];
+ shot12.src = cardsImages[colorCode[11]];
+ shot13.src = cardsImages[colorCode[12]];
+ shot14.src = cardsImages[colorCode[13]];
+ shot15.src = cardsImages[colorCode[14]];
+ shot16.src = cardsImages[colorCode[15]];
+ shot17.src = cardsImages[colorCode[16]];
+ shot18.src = cardsImages[colorCode[17]];
+ shot19.src = cardsImages[colorCode[18]];
+ shot20.src = cardsImages[colorCode[19]];
+ shot21.src = cardsImages[colorCode[20]];
+ shot22.src = cardsImages[colorCode[21]];
+ shot23.src = cardsImages[colorCode[22]];
+ shot24.src = cardsImages[colorCode[23]];
+ shot25.src = cardsImages[colorCode[24]];
+
+ shot1_1.src = cardsImages[colorCode[0]];
+ shot2_1.src = cardsImages[colorCode[1]];
+ shot3_1.src = cardsImages[colorCode[2]];
+ shot4_1.src = cardsImages[colorCode[3]];
+ shot5_1.src = cardsImages[colorCode[4]];
+ shot6_1.src = cardsImages[colorCode[5]];
+ shot7_1.src = cardsImages[colorCode[6]];
+ shot8_1.src = cardsImages[colorCode[7]];
+ shot9_1.src = cardsImages[colorCode[8]];
+ shot10_1.src = cardsImages[colorCode[9]];
+ shot11_1.src = cardsImages[colorCode[10]];
+ shot12_1.src = cardsImages[colorCode[11]];
+ shot13_1.src = cardsImages[colorCode[12]];
+ shot14_1.src = cardsImages[colorCode[13]];
+ shot15_1.src = cardsImages[colorCode[14]];
+ shot16_1.src = cardsImages[colorCode[15]];
+ shot17_1.src = cardsImages[colorCode[16]];
+ shot18_1.src = cardsImages[colorCode[17]];
+ shot19_1.src = cardsImages[colorCode[18]];
+ shot20_1.src = cardsImages[colorCode[19]];
+ shot21_1.src = cardsImages[colorCode[20]];
+ shot22_1.src = cardsImages[colorCode[21]];
+ shot23_1.src = cardsImages[colorCode[22]];
+ shot24_1.src = cardsImages[colorCode[23]];
+ shot25_1.src = cardsImages[colorCode[24]];
+     
+
+
+  	var y = Math.round((x - Math.floor(x))*25);
+   //  document.getElementById("demo").innerHTML = (x - Math.floor(x)) + " also, " + newNum + " and: " + stringNum + " and this... " + b;
+  	// document.getElementById("SeedNumber").innerHTML = "Game Number: " + (newSeed-1);
+
+    document.getElementById("First").innerHTML = "&nbsp;" + wordBoardArray[0];
+    document.getElementById("firstUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[0];
+
+    document.getElementById("Second").innerHTML = wordBoardArray[1];
+     document.getElementById("secondUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[1];
+
+    document.getElementById("Third").innerHTML = wordBoardArray[2];
+     document.getElementById("thirdUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[2];
+
+    document.getElementById("Fourth").innerHTML = wordBoardArray[3];
+     document.getElementById("fourthUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[3];
+
+
+    document.getElementById("Fifth").innerHTML = wordBoardArray[4];
+     document.getElementById("fifthUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[4];
+
+    document.getElementById("Sixth").innerHTML = wordBoardArray[5];
+     document.getElementById("sixthUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[5];
+
+    document.getElementById("Seventh").innerHTML = wordBoardArray[6];
+     document.getElementById("seventhUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[6];
+
+    document.getElementById("Eighth").innerHTML = wordBoardArray[7];
+     document.getElementById("eighthUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[7];
+
+    document.getElementById("Nine").innerHTML = wordBoardArray[8];
+     document.getElementById("nineUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[8];
+
+    document.getElementById("Ten").innerHTML = wordBoardArray[9];
+     document.getElementById("tenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[9];
+
+    document.getElementById("Eleven").innerHTML = wordBoardArray[10];
+     document.getElementById("elevenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[10];
+
+    document.getElementById("Twelve").innerHTML = wordBoardArray[11];
+     document.getElementById("twelveUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[11];
+
+    document.getElementById("Thirteen").innerHTML = wordBoardArray[12];
+     document.getElementById("thirteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[12];
+
+    document.getElementById("Fourteen").innerHTML = wordBoardArray[13];
+     document.getElementById("fourteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[13];
+
+    document.getElementById("Fifteen").innerHTML = wordBoardArray[14];
+     document.getElementById("fifteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[14];
+
+    document.getElementById("Sixteen").innerHTML = wordBoardArray[15];
+     document.getElementById("sixteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[15];
+
+    document.getElementById("Seventeen").innerHTML = wordBoardArray[16];
+     document.getElementById("seventeenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[16];
+
+    document.getElementById("Eighteen").innerHTML = wordBoardArray[17];
+     document.getElementById("eighteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[17];
+
+    document.getElementById("Nineteen").innerHTML = wordBoardArray[18];
+     document.getElementById("nineteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[18];
+
+    document.getElementById("Twenty").innerHTML = wordBoardArray[19];
+     document.getElementById("twentyUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[19];
+
+    document.getElementById("TwentyOne").innerHTML = wordBoardArray[20];
+     document.getElementById("twentyoneUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[20];
+
+    document.getElementById("TwentyTwo").innerHTML = wordBoardArray[21];
+     document.getElementById("twentytwoUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[21];
+
+    document.getElementById("TwentyThree").innerHTML = wordBoardArray[22];
+     document.getElementById("twentythreeUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[22];
+
+    document.getElementById("TwentyFour").innerHTML = wordBoardArray[23];
+     document.getElementById("twentyfourUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[23];
+
+    document.getElementById("TwentyFive").innerHTML = wordBoardArray[24];
+     document.getElementById("twentyfiveUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[24];
+
+
+ 	  // document.getElementById("twentyFive").innerHTML = "y: " + y;
+    document.getElementById("teamStart").innerHTML = colorStart + " goes first! [Game Number: " + (newSeed-1) + "]";
+    // document.getElementById("board").innerHTML = boardArray + "<br> Board Array with numbers: " + colorCode + (boardArray[0].toString() === "RED") + boardArray[0];
+    // document.getElementById("gameWords").innerHTML = wordBoardArray + "<br> Word-Board Array length:" + wordBoardArray.length;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function seed() {
+	var oldSeed = prompt("Please enter your Game Number: ");
+    var x = Math.sin(oldSeed++) * 10000;
+
+spoilerCounter = 0;
+spoilerCounter1 = 0;
+spoilerCounter2 = 0;
+spoilerCounter3 = 0;
+spoilerCounter4 = 0;
+spoilerCounter5 = 0;
+spoilerCounter6 = 0;
+spoilerCounter7 = 0;
+spoilerCounter8 = 0;
+spoilerCounter9 = 0;
+spoilerCounter10 = 0;
+spoilerCounter11 = 0;
+spoilerCounter12 = 0;
+spoilerCounter13 = 0;
+spoilerCounter14 = 0;
+spoilerCounter15 = 0;
+spoilerCounter16 = 0;
+spoilerCounter17 = 0;
+spoilerCounter18 = 0;
+spoilerCounter19 = 0;
+spoilerCounter20 = 0;
+spoilerCounter21 = 0;
+spoilerCounter22 = 0;
+spoilerCounter23 = 0;
+spoilerCounter24 = 0;
+spoilerCounter25 = 0;
+    document.getElementById("shot1").style.opacity = 0;
+    document.getElementById("shot2").style.opacity = 0;
+    document.getElementById("shot3").style.opacity = 0;
+    document.getElementById("shot4").style.opacity = 0;
+    document.getElementById("shot5").style.opacity = 0;
+    document.getElementById("shot6").style.opacity = 0;
+    document.getElementById("shot7").style.opacity = 0;
+    document.getElementById("shot8").style.opacity = 0;
+    document.getElementById("shot9").style.opacity = 0;
+    document.getElementById("shot10").style.opacity = 0;
+    document.getElementById("shot11").style.opacity = 0;
+    document.getElementById("shot12").style.opacity = 0;
+    document.getElementById("shot13").style.opacity = 0;
+    document.getElementById("shot14").style.opacity = 0;
+    document.getElementById("shot15").style.opacity = 0;
+    document.getElementById("shot16").style.opacity = 0;
+    document.getElementById("shot17").style.opacity = 0;
+    document.getElementById("shot18").style.opacity = 0;
+    document.getElementById("shot19").style.opacity = 0;
+    document.getElementById("shot20").style.opacity = 0;
+    document.getElementById("shot21").style.opacity = 0;
+    document.getElementById("shot22").style.opacity = 0;
+    document.getElementById("shot23").style.opacity = 0;
+    document.getElementById("shot24").style.opacity = 0;
+    document.getElementById("shot25").style.opacity = 0;
+    
+     document.getElementById("shot1_1").style.opacity = 0;
+    document.getElementById("shot2_1").style.opacity = 0;
+    document.getElementById("shot3_1").style.opacity = 0;
+    document.getElementById("shot4_1").style.opacity = 0;
+    document.getElementById("shot5_1").style.opacity = 0;
+    document.getElementById("shot6_1").style.opacity = 0;
+    document.getElementById("shot7_1").style.opacity = 0;
+    document.getElementById("shot8_1").style.opacity = 0;
+    document.getElementById("shot9_1").style.opacity = 0;
+    document.getElementById("shot10_1").style.opacity = 0;
+    document.getElementById("shot11_1").style.opacity = 0;
+    document.getElementById("shot12_1").style.opacity = 0;
+    document.getElementById("shot13_1").style.opacity = 0;
+    document.getElementById("shot14_1").style.opacity = 0;
+    document.getElementById("shot15_1").style.opacity = 0;
+    document.getElementById("shot16_1").style.opacity = 0;
+    document.getElementById("shot17_1").style.opacity = 0;
+    document.getElementById("shot18_1").style.opacity = 0;
+    document.getElementById("shot19_1").style.opacity = 0;
+    document.getElementById("shot20_1").style.opacity = 0;
+    document.getElementById("shot21_1").style.opacity = 0;
+    document.getElementById("shot22_1").style.opacity = 0;
+    document.getElementById("shot23_1").style.opacity = 0;
+    document.getElementById("shot24_1").style.opacity = 0;
+    document.getElementById("shot25_1").style.opacity = 0;
+    
+var blueArray = ["BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","RED","RED","RED","RED","RED","RED","RED","RED","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","ASSASSIN"];
+var redArray  =["RED","RED","RED","RED","RED","RED","RED","RED","RED","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BLUE","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","BYSTANDER","ASSASSIN"];
+  
+var wordArray = ["AFRICA","AGENT","AIR","ALIEN","ALPS","AMAZON","AMBULANCE","AMERICA","ANGEL","ANTARCTICA","APPLE","ARM","ATLANTIS","AUSTRALIA","AZTEC","BACK","BALL","BALL ","BAND","BANK","BAR","BARK","BASE","BAT","BATTERY","BEACH","BEAR","BEAT","BED","BEIJING","BELL","BELT","BERLIN","BERMUDA","BERRY","BILL","BLOCK","BOARD","BOLT","BOND","BOOM","BOOT","BOTTLE","BOW","BOX","BRIDGE","BRUSH","BUCK","BUFFALO","BUG","BUG ","CALF","CANADA","CAP","CAPITAL","CAR","CARD","CARROT","CASINO","CAST","CAT","CELL","CENTAUR","CENTER","CHAIR","CHANGE","CHARGE","CHECK","CHECK ","CHEST","CHICK","CHINA","CHOCOLATE","CHURCH","CIRCLE","CLIFF","CLUB","CODE","COLD","COMIC","COMPOUND","CONCERT","CONTRACT","COOK","COPPER","CORNER","COTTON","COURT","COVER","CRANE","CRASH","CRICKET","CROSS","CROWN","CYCLE","CZECH","DANCE","DATE","DAY","DEATH","DECK","DEGREE","DIAMOND","DICE","DINOSAUR","DISEASE","DOCTOR","DOG","DRAFT","DRAGON","DRESS","DRESS ","DRILL","DROP","DUCK","DWARF","EAGLE","EGYPT","ENGINE","ENGLAND","EUROPE","EYE","FAIR","FALL","NURSE","FAN","FENCE","FIELD","FIGHTER","FIGURE","FILE","FILM","FIRE","FISH","FLUTE","FLY","FOOT","FORCE","FOREST","FORK","FRANCE","GAME","GAS","GENIUS","GERMANY","GHOST","GIANT","GLASS","GLOVE","GOLD","GRACE","GRASS","GREECE","GREEN","GROUND","HAM","HAND","HAWK","HEAD","HEART","HELICOPTER","HIMALAYAS","HOLE","HOLLYWOOD","HONEY","HOOD","HOOK","HORN","HORSE","HORSESHOE","HOSPITAL","HOTEL","ICE","ICE CREAM","INDIA","INFLUENZA","IRON","IVORY","JAM","JAME","JET","JUPITER","KANGAROO","KETCHUP","KEY","KID","KING","KIWI","KNIFE","KNIGHT","LAB","LAP","LASER","LAWYER","LEAD","LEMON","LIFE","LIMOUSINE","LINE","LINK","LION","LITTER","LOCH NESS","LOCK","LOG","LONDON","LUCK","MAIL","MAMMOTH","MAPLE","MARBLE","MARCH","MARK","MASS","MATCH","MERCURY","MEXICO","MICROSCOPE","MILLIONAIRE","MINE","MINT","MISSILE","MODEL","MOLE","MOON","MOSCOW","MOUNT","MOUTH","MUG","NAIL","NEEDLE","NET","NEW YORK","NIGHT","NOTE","NOVEL","NURSE","NUT","OCTOPUS","OIL","OLIVE","OLYMPUS","OPERA","ORANGE","PALM","PANTS","PAPER","PARK","PART","PASS","PASTE","PENGUIN","PHOENIX","PIANO","PIE","PILOT","PIN","PIPE","PIRATE","PISTOL","PIT","PITCH","PLANE","PLASTIC","PLATE","PLATYPUS","PLAY","PLOT","POINT","POISON","POLE","POOL","POOL ","PORT","POST","POUND","PRESS","PRINCESS","PRIVATE","PARK","PUMPKIN","PUPIL","PURPLE","PYRAMID","QUEEN","RABBIT","RACKET","RAY","REVOLUTION","RING","ROBIN","ROBOT","ROCK","ROME","ROOT","ROSE","ROULETTE","ROUND","ROW","RULER","SATELLITE","SATURN","SCALE","SCHOOL","SCORPION","SCREEN","SCREEN ","SCUBA DIVER","SEAL","SEARCH","SERVER","SHADOW","SHAKESPEARE","SHARK","SHIP","SHOE","SHOP","SHOT","SKYSCRAPER","SLIP","SMUGGLER","SNOW","SNOWMAN","SOCK","SOLDIER","SOUL","SOUND","SPACE","SPIKE","SPINE","SPOT","SPRING","SPY","SQUARE","STADIUM","STAFF","STAR","STATE","STICK","STOCK","STRAW","STREAM","STRIKE","STRING","SUB","SUIT","SUPERHERO","SWING","SWITCH","TABLE","TABLET","TAG","TAIL","TAP","TEACHER","TELESCOPE","TEMPLE","THEATER","THIEF","THUMB","TICK","TIE","TIME","TOKYO","TOOTH","TORCH","TOWER","TRACK","TRAIN","TRIANGLE","TRIP","TRUNK","TUBA","TUBE","TURKEY","UNDERTAKER","UNICORN","VACUUM","VAN","VET","WAKE","WALL","WAR","WASHER","WASHINGTON","WATCH","WATER","WAVE","WEB","WELL","WHALE","WHIP","WIND","WITCH","WORM","YARD"];
+  
+    var colorSetup = x > .5 ? blueArray : redArray; 
+    var colorStart = colorSetup === blueArray ? "BLUE" :"RED";
+
+    var wordBoardArray = [];
+    var boardArray = [];
+    var n = colorSetup.length;
+    var y = 0;
+    var z = 0;
+    var p = 0;
+    var m = 0;
+    var q = 0;
+    var wordq = 0;
+
+    var t = x - Math.floor(x);
+    var b = t.toString().split("");
+    b.splice(0, 2);    
+
+    b.push(b.shift());
+    m = parseFloat("." + b.join(""));
+
+
+   
+
+    var newNum = Math.round((x - Math.floor(x))*10000000000000000)*2;
+    var longArray = [];
+    var stringNum = newNum.toString().split("");
+    stringNum = stringNum.concat(stringNum);
+      for (i = 0; i < n; i++){
+        p = colorSetup.length;
+        q = wordArray.length;
+
+        // b.push(b.shift());
+         b.push(b.shift());
+         m = parseFloat("." + b.join(""));
+         y = Math.floor(m*p);
+        wordq = Math.floor(m*q);
+        wordBoardArray.push(wordArray.splice(wordq,1));
+        boardArray.push(colorSetup.splice(y,1));
+      }
+
+   var colorCode = [];
+
+ for (i = 0; i < boardArray.length; i++){
+   if(boardArray[i].toString() === "RED"){
+     colorCode.push(0);
+   } if(boardArray[i].toString() === "BLUE"){
+     colorCode.push(1);
+   } if(boardArray[i].toString() === "ASSASSIN"){
+     colorCode.push(2);
+   } if(boardArray[i].toString() === "BYSTANDER"){
+     colorCode.push(3);
+   }
+ }
+
+ var cardsImages = ["RedCard.png","BlueCard.png","AssassinCard.png","BystanderCard.png"];
+
+ shot1.src = cardsImages[colorCode[0]];
+ shot2.src = cardsImages[colorCode[1]];
+ shot3.src = cardsImages[colorCode[2]];
+ shot4.src = cardsImages[colorCode[3]];
+ shot5.src = cardsImages[colorCode[4]];
+ shot6.src = cardsImages[colorCode[5]];
+ shot7.src = cardsImages[colorCode[6]];
+ shot8.src = cardsImages[colorCode[7]];
+ shot9.src = cardsImages[colorCode[8]];
+ shot10.src = cardsImages[colorCode[9]];
+ shot11.src = cardsImages[colorCode[10]];
+ shot12.src = cardsImages[colorCode[11]];
+ shot13.src = cardsImages[colorCode[12]];
+ shot14.src = cardsImages[colorCode[13]];
+ shot15.src = cardsImages[colorCode[14]];
+ shot16.src = cardsImages[colorCode[15]];
+ shot17.src = cardsImages[colorCode[16]];
+ shot18.src = cardsImages[colorCode[17]];
+ shot19.src = cardsImages[colorCode[18]];
+ shot20.src = cardsImages[colorCode[19]];
+ shot21.src = cardsImages[colorCode[20]];
+ shot22.src = cardsImages[colorCode[21]];
+ shot23.src = cardsImages[colorCode[22]];
+ shot24.src = cardsImages[colorCode[23]];
+ shot25.src = cardsImages[colorCode[24]];
+
+ shot1_1.src = cardsImages[colorCode[0]];
+ shot2_1.src = cardsImages[colorCode[1]];
+ shot3_1.src = cardsImages[colorCode[2]];
+ shot4_1.src = cardsImages[colorCode[3]];
+ shot5_1.src = cardsImages[colorCode[4]];
+ shot6_1.src = cardsImages[colorCode[5]];
+ shot7_1.src = cardsImages[colorCode[6]];
+ shot8_1.src = cardsImages[colorCode[7]];
+ shot9_1.src = cardsImages[colorCode[8]];
+ shot10_1.src = cardsImages[colorCode[9]];
+ shot11_1.src = cardsImages[colorCode[10]];
+ shot12_1.src = cardsImages[colorCode[11]];
+ shot13_1.src = cardsImages[colorCode[12]];
+ shot14_1.src = cardsImages[colorCode[13]];
+ shot15_1.src = cardsImages[colorCode[14]];
+ shot16_1.src = cardsImages[colorCode[15]];
+ shot17_1.src = cardsImages[colorCode[16]];
+ shot18_1.src = cardsImages[colorCode[17]];
+ shot19_1.src = cardsImages[colorCode[18]];
+ shot20_1.src = cardsImages[colorCode[19]];
+ shot21_1.src = cardsImages[colorCode[20]];
+ shot22_1.src = cardsImages[colorCode[21]];
+ shot23_1.src = cardsImages[colorCode[22]];
+ shot24_1.src = cardsImages[colorCode[23]];
+ shot25_1.src = cardsImages[colorCode[24]];
+     
+
+
+    var y = Math.round((x - Math.floor(x))*25);
+   //  document.getElementById("demo").innerHTML = (x - Math.floor(x)) + " also, " + newNum + " and: " + stringNum + " and this... " + b;
+    // document.getElementById("SeedNumber").innerHTML = "Game Number: " + (newSeed-1);
+
+    document.getElementById("First").innerHTML = "&nbsp;" + wordBoardArray[0];
+    document.getElementById("firstUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[0];
+
+    document.getElementById("Second").innerHTML = wordBoardArray[1];
+     document.getElementById("secondUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[1];
+
+    document.getElementById("Third").innerHTML = wordBoardArray[2];
+     document.getElementById("thirdUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[2];
+
+    document.getElementById("Fourth").innerHTML = wordBoardArray[3];
+     document.getElementById("fourthUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[3];
+
+
+    document.getElementById("Fifth").innerHTML = wordBoardArray[4];
+     document.getElementById("fifthUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[4];
+
+    document.getElementById("Sixth").innerHTML = wordBoardArray[5];
+     document.getElementById("sixthUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[5];
+
+    document.getElementById("Seventh").innerHTML = wordBoardArray[6];
+     document.getElementById("seventhUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[6];
+
+    document.getElementById("Eighth").innerHTML = wordBoardArray[7];
+     document.getElementById("eighthUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[7];
+
+    document.getElementById("Nine").innerHTML = wordBoardArray[8];
+     document.getElementById("nineUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[8];
+
+    document.getElementById("Ten").innerHTML = wordBoardArray[9];
+     document.getElementById("tenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[9];
+
+    document.getElementById("Eleven").innerHTML = wordBoardArray[10];
+     document.getElementById("elevenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[10];
+
+    document.getElementById("Twelve").innerHTML = wordBoardArray[11];
+     document.getElementById("twelveUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[11];
+
+    document.getElementById("Thirteen").innerHTML = wordBoardArray[12];
+     document.getElementById("thirteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[12];
+
+    document.getElementById("Fourteen").innerHTML = wordBoardArray[13];
+     document.getElementById("fourteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[13];
+
+    document.getElementById("Fifteen").innerHTML = wordBoardArray[14];
+     document.getElementById("fifteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[14];
+
+    document.getElementById("Sixteen").innerHTML = wordBoardArray[15];
+     document.getElementById("sixteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[15];
+
+    document.getElementById("Seventeen").innerHTML = wordBoardArray[16];
+     document.getElementById("seventeenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[16];
+
+    document.getElementById("Eighteen").innerHTML = wordBoardArray[17];
+     document.getElementById("eighteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[17];
+
+    document.getElementById("Nineteen").innerHTML = wordBoardArray[18];
+     document.getElementById("nineteenUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[18];
+
+    document.getElementById("Twenty").innerHTML = wordBoardArray[19];
+     document.getElementById("twentyUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[19];
+
+    document.getElementById("TwentyOne").innerHTML = wordBoardArray[20];
+     document.getElementById("twentyoneUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[20];
+
+    document.getElementById("TwentyTwo").innerHTML = wordBoardArray[21];
+     document.getElementById("twentytwoUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[21];
+
+    document.getElementById("TwentyThree").innerHTML = wordBoardArray[22];
+     document.getElementById("twentythreeUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[22];
+
+    document.getElementById("TwentyFour").innerHTML = wordBoardArray[23];
+     document.getElementById("twentyfourUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[23];
+
+    document.getElementById("TwentyFive").innerHTML = wordBoardArray[24];
+     document.getElementById("twentyfiveUpsideDown").innerHTML = "&nbsp;" + wordBoardArray[24];
+
+    // var y = Math.round((x - Math.floor(x))*25);
+    // document.getElementById("demo").innerHTML = (x - Math.floor(x)) + " also, " + newNum + " and: " + stringNum + " and this... " + b;
+    // document.getElementById("SeedNumber").innerHTML = "Game Number: " + (oldSeed-1);
+    // document.getElementById("twentyFive").innerHTML = "y: " + y;
+    document.getElementById("teamStart").innerHTML = colorStart + " goes first! [Game Number: " + (oldSeed-1) + "]";
+  //   document.getElementById("board").innerHTML = boardArray + "<br> Board Array length:" + boardArray.length;
+  // document.getElementById("gameWords").innerHTML = wordBoardArray + "<br> Word-Board Array length:" + wordBoardArray.length;
+}
+</script>
+
+</body>

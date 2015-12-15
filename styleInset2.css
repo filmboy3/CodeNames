@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'Audiowide';
+    src: url("Audiowide-Regular.ttf");
+}
+
+body {
+    margin:10px;     /* This is used to reset any browser-default margins */
+    height:100vh; 
+    width:100vw; 
+    font-family: 'Audiowide', cursive;
+    font-size: 2.9vh;
+
+
+/* The following pattern is downloaded from www.subtlepatterns.com  "Concrete Seamless", Made by Anchour.
+ If you need more, that's where to get'em.*/
+
+    background: url("backgroundNew2.png") no-repeat center center fixed;
+   /* background-size: no-repeat center center fixed;*/
+   /* background: repeating-radial-gradient(circle,white,#f7fdf 10px,#f2fceb 10px, #e8fadb 20px);*/
+}
+
+
+#info {
+    display: none;
+}
+
+@media all and (orientation:portrait){
+    body {
+            height:90vh; 
+            width:100vw; 
+    }
+    #infoMore {
+        margin-top:1px;
+        margin-bottom:1px;
+    }
+    #info {
+
+        display: block;
+        color:black;
+        text-shadow: 1px .5px white;
+        margin-top: 0px;
+    }
+}
+
+#tinyBreak {
+   display: block;
+   margin-top: 10px;
+
+}
+
+@media all and (orientation:landscape){
+   #newGameButton, #spoilButton, #joinButton, #counterButton, #timerButton{
+  font-size: 3vw;
+ }
+}
+
+
+@media all and (orientation:portrait){ 
+    #new1, #new2, #new3, #new4, #new5, #new6, #new7, #new8, #new9, #new10, 
+#new11, #new12, #new13, #new14, #new15, #new16, #new17, #new18, #new19,
+ #new20, #new21, #new22, #new23, #new24, #new25, #new1UpsideDown, #new1UpsideDown, #new2UpsideDown, #new3UpsideDown, 
+ #new4UpsideDown, #new5UpsideDown, #new6UpsideDown, #new7UpsideDown, #new8UpsideDown, #new9UpsideDown, 
+ #new10UpsideDown, #new11UpsideDown, #new12UpsideDown, #new13UpsideDown, #new14UpsideDown, 
+ #new15UpsideDown, #new16UpsideDown, #new17UpsideDown, #new18UpsideDown, #new19UpsideDown,
+ #new20UpsideDown, #new21UpsideDown, #new22UpsideDown, #new23UpsideDown, 
+ #new24UpsideDown, #new25UpsideDown {
+    opacity: 0 !important;
+    display: none;
+ }
+ #newGameButton, #spoilButton, #joinButton, #counterButton, #timerButton{
+  font-size: 3vw;
+ }
+}
+.boxes {
+    height:13vh;
+   /* box-shadow: 1px 1px 1px #999966;*/
+    border-radius: 1vh;
+    background-color: gray;
+    width:17.5vw;
+    /*padding-left: 1vw;
+    padding-right: 1vw;*/
+    border-style: solid black;
+    display: inline-block;
+    background-image: url("SpyLight12.png");
+    background-size: 7vw 12vh; 
+    background-repeat: repeat;
+    background-position: right; 
+    text-align: justify;
+    margin-top: .2px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+    line-height: 10vh;
+    text-shadow: 1px .5px #FFF;
+    box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+
+}
+#nav {
+    margin: 0;
+    float: left;
+}
+
+img {
+    z-index: 1;
+    opacity: 0;
+    position:absolute;
+    height:13vh;
+    width:11.5vw;
+    padding-left:3vw;
+
+}
+
+
+
+/*#shot1_1 {
+    z-index: 2;
+    opacity: 0;
+    position:absolute;
+    height:13vh;
+    width:11.5vw;
+    padding-left:30px;
+    box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+
+
+}*/
+
+#start {
+    width: 100vw;
+    height: 5vh;
+    text-shadow: 1px .5px #FFF;
+}
+
+#teamStart {
+    line-height: 2px;
+    text-align: center;
+}
+
+#totalBox {
+    /*height: 95vh;
+    width: 95vw;*/
+    /*background-color: #8C489F;*/
+    margin: auto;
+   /*  border-radius: 25px;*/
+}
+
+#bg1{
+    background-image: url("SpyLight1.png");
+    background-color: #909090;
+}
+#bg2{
+    background-image: url("SpyLight2.png");
+}
+#bg3{
+    background-image: url("SpyLight3.png");
+        background-color: #909090;
+
+}
+#bg4{
+    background-image: url("SpyLight4.png");
+}
+#bg5{
+    background-image: url("SpyLight5.png");
+        background-color: #909090;
+
+}
+#bg6{
+    background-image: url("SpyLight6.png");
+}
+#bg7{
+    background-image: url("SpyLight7.png");
+    background-color: #909090;
+}
+#bg8{
+    background-image: url("SpyLight8.png");
+}
+#bg9{
+    background-image: url("SpyLight9.png");
+        background-color: #909090;
+
+
+}
+#bg10{
+    background-image: url("SpyLight10.png");
+}
+#bg11{
+    background-image: url("SpyLight11.png");
+        background-color: #909090;
+
+}
+#bg12{
+    background-image: url("SpyLight12.png");
+}
+#bg13{
+    background-image: url("SpyLight6.png");
+        background-color: #909090;
+
+}
+#bg14{
+    background-image: url("SpyLight5.png");
+}
+#bg15{
+    background-image: url("SpyLight4.png");
+        background-color: #909090;
+
+}
+#bg16{
+    background-image: url("SpyLight3.png");
+}
+#bg17{
+    background-image: url("SpyLight2.png");
+        background-color: #909090;
+
+}
+#bg18{
+    background-image: url("SpyLight1.png");
+}
+#bg19{
+    background-image: url("SpyLight7.png");
+        background-color: #909090;
+
+}
+#bg20{
+    background-image: url("SpyLight8.png");
+}
+#bg21{
+    background-image: url("SpyLight9.png");
+        background-color: #909090;
+
+}
+#bg22{
+    background-image: url("SpyLight10.png");
+}
+#bg23{
+    background-image: url("SpyLight11.png");
+        background-color: #909090;
+
+}
+#bg24{
+    background-image: url("SpyLight12.png");
+}
+#bg25{
+    background-image: url("SpyLight5.png");
+        background-color: #909090;
+
+}
+
+
+
+
+#new1, #new2, #new3, #new4, #new5, #new6, #new7, #new8, #new9, #new10, 
+#new11, #new12, #new13, #new14, #new15, #new16, #new17, #new18, #new19,
+ #new20, #new21, #new22, #new23, #new24, #new25 {
+    display: inline-block;
+    float:left;
+    margin: auto;
+    color: white;
+    font-size: 2.3vw;
+    padding-bottom: 2.5vh;
+    color:#4c4c4c;
+    text-align:center;
+    text-shadow: 0px 1px 1px #a6a6a6; 
+    margin-left: 0.5vw;
+    margin-top: 0.5vw;  
+
+   
+}
+
+
+#newGameButton, #spoilButton, #joinButton, #counterButton, #timerButton{
+        box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+
+    font-family: 'Audiowide', cursive;
+    color: white;
+   font-size: 4.7vw;
+   background-color: gray;
+   border-radius: 5px;
+ color:#4c4c4c;
+    text-align:center;
+    text-shadow: 0px 1px 1px #a6a6a6; 
+
+}
+
+
+
+/*#newGameButton, #spoilButton, #joinButton, #counterButton, #timerButton{
+        box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+
+    font-family: 'Audiowide', cursive;
+    color: white;
+   font-size: 5vw;
+   background-color: gray;
+   border-radius: 5px;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
+}
+*/
+.mettermess {
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+
+.letterpress {
+    
+    font-size: 36px; /* fallback*/ 
+   
+  background-color: white;
+  color: transparent;
+  text-shadow: rgba(255,255,255,0.5) 0px 5px 5px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+
+}
+
+
+#new1UpsideDown, #new1UpsideDown_1, #new2UpsideDown, #new3UpsideDown, #new4UpsideDown,
+ #new5UpsideDown, #new6UpsideDown, #new7UpsideDown, #new8UpsideDown, #new9UpsideDown, 
+ #new10UpsideDown, #new11UpsideDown, #new12UpsideDown, #new13UpsideDown, #new14UpsideDown, 
+ #new15UpsideDown, #new16UpsideDown, #new17UpsideDown, #new18UpsideDown, #new19UpsideDown,
+ #new20UpsideDown, #new21UpsideDown, #new22UpsideDown, #new23UpsideDown, 
+ #new24UpsideDown, #new25UpsideDown {
+    color: #3d4c3d;
+/*  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+*/
+  display: inline-block;
+  transform: scaleY(-1) scaleX(-1); /* standard */
+  filter: FlipH FlipV; /* IE 6/7/8 */
+  float:right;
+   margin-right: .2vw;
+  padding-bottom: 2.5vh;
+  opacity: .5;
+
+color: #222;
+text-shadow: 0px 1px 1px #4d4d4d;
+}
